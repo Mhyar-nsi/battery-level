@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    background-color: rgb(35, 35, 35);
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+}
+.battery-box {
+    width: 40px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+.level {
+    height: 100%;
+    border: 2px solid rgb(35, 35, 35);
+    border-radius: 3px;
+}
+.battery::after {
+    content: "";
+    width: 3px;
+    height: 6px;
+    margin: 1.5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.battery-level {
+    color: #fff;
+    margin: 5px;
+}
+.active {
+    animation: charge-animation 3s infinite linear;
+}
+@keyframes charge-animation {
+    0% {
+        width: 0;
+      }
+    100% {
+        width: 100%;
+    }
+}
